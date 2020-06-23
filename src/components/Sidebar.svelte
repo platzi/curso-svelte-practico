@@ -1,4 +1,7 @@
+<script>
+  import Newsletter from "./Newsletter.svelte";
+</script>
+
 <div class="Sibebar">
-  <h4>Newsletter</h4>
-  <p>Recibe la ultimas novedades sobre frontend en tu correo.</p>
+  <Newsletter />
 </div>
