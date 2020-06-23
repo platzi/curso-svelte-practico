@@ -8,7 +8,7 @@
   .Main-content {
     margin: 2em 0 0 0;
     display: grid;
-    grid-auto-columns: 3fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-gap: 60px;
     justify-content: space-between;
   }
