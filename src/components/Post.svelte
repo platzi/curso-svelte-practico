@@ -1,4 +1,5 @@
 <script>
+  import readingTime from "../utils/readingTime";
   export let post;
 </script>
 
@@ -56,7 +57,7 @@
         <p>
           <time datetime={post.createdAt}>{post.createdAT}</time>
           <span class="dot">.</span>
-          <span>5 min</span>
+          <span>{readingTime(post.html)}</span>
         </p>
       </div>
       <div class="Post-tags" />
