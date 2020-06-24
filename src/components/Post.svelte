@@ -1,5 +1,6 @@
 <script>
   import readingTime from "../utils/readingTime";
+  import randomEmoji from "../utils/randomEmoji";
   export let post;
 </script>
 
@@ -52,7 +53,9 @@
     <div class="Post-head">
       <div class="Post-title">
         <h2>
-          <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
+          <a rel="prefetch" href="blog/{post.slug}">
+            {randomEmoji()} {post.title}
+          </a>
         </h2>
         <p>
           <time datetime={post.createdAt}>{post.createdAT}</time>
