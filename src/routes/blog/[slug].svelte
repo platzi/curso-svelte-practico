@@ -1,7 +1,5 @@
 <script context="module">
   export async function preload({ params, query }) {
-    // the `slug` parameter is available because
-    // this file is called [slug].svelte
     const res = await this.fetch(`blog/${params.slug}.json`);
     const data = await res.json();
 
@@ -14,9 +12,24 @@
 </script>
 
 <script>
+  import { onMount } from "svelte";
   import readingTime from "../../utils/readingTime";
   import formatIsoTime from "../../utils/formatIsoTime";
   export let post;
+
+  const disqus = () => {
+    if (document.readyState === "complete") {
+      let d = document,
+        s = d.createElement("script");
+      s.src = "https://gndxlive.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  };
+
+  onMount(async () => {
+    await disqus();
+  });
 </script>
 
 <style>
@@ -26,7 +39,7 @@
     margin: 0;
     padding: 0;
   }
-  .Post-title p {
+  p {
     color: #555;
     font-size: 14px;
     font-weight: 300;
@@ -53,5 +66,7 @@
   <div class="content">
     {@html post.html}
   </div>
-  <div class="comments" />
+  <div class="comments">
+    <div id="disqus_thread" />
+  </div>
 </div>
