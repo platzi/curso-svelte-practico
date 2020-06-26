@@ -1,0 +1,94 @@
+body {
+	margin: 0;
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0.5em 0;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+a {
+	color: inherit;
+}
+
+code {
+  font-family: menlo, inconsolata, monospace;
+  font-size: calc(1em - 2px);
+  color: #555;
+  background-color: #f0f0f0;
+  padding: 0.2em 0.4em;
+  border-radius: 2px;
+}
+
+.content p {
+  color: #333;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  word-break: break-word;
+  font-weight: 300;
+}
+.content h2 {
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #191a22;
+}
+.content img {
+  width: 100%;
+}
+.content pre {
+  background-color: #f9f9f9;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
+  padding: 0.5em;
+  border-radius: 2px;
+  overflow-x: auto;
+}
+.content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+.content ul {
+  line-height: 1.5;
+}
+.content li {
+  margin: 0 0 0.5em 0;
+}
+
+.content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.content .youtube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content .kg-embed-card {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 0.4em 0 1.6em;
+}
+
+@media (min-width: 400px) {
+	body {
+		font-size: 16px;
+	}
+}
