@@ -26,7 +26,7 @@
   <title>Oscar Barajas Tavares</title>
   <meta name="description" content="Blog de gndx live" />
 
-  <meta name="twitter:card" content="summary_larga_image" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@gndx" />
   <meta name="twitter:creator" content="@gndx" />
   <meta name="twitter:title" content="Oscar Barajas Tavares" />
