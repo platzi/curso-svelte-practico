@@ -3,6 +3,7 @@
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
+    "data": "node src/bin/index.js",
     "dev": "sapper dev",
     "build": "sapper build",
     "export": "sapper export",

@@ -5,6 +5,12 @@ require('dotenv').config();
 
 const API = process.env.GHOST_API;
 
+const writeFile = (obj) => {
+  const parseData = JSON.stringify(obj);
+  fs.writeFileSync('./src/routes/blog/_posts.json', parseData);
+  console.log('Datos guardados');
+}
+
 const fetchData = async () => {
   const response = await fetch(API);
   const data = await response.json();
@@ -15,7 +21,7 @@ const fetchData = async () => {
       "slug": post.slug,
       "createdAt": post.created_at,
       "id": post.id,
-      "desc": post.meta_description,
+      "desc": post.excerpt,
       "tag": post.meta_title,
       image: post.feature_image
     }
@@ -34,3 +40,5 @@ const fetchData = async () => {
     writeFile(posts);
   }
 }
+
+fetchData();
